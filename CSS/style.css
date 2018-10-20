@@ -340,6 +340,10 @@ fieldset {
   .imgContainer {
     width: calc(100%/3);
   }
+
+    #contactContainer {
+        display: block;
+    }
 }
 
 @media screen and (max-width:639px) {
@@ -368,5 +372,8 @@ fieldset {
     }
     #message {
         width: auto;
+    }
+    #contactContainer {
+        display: block;
     }
 }

@@ -1,11 +1,19 @@
-let tab = document.getElementsByTagName('a');
-for (let a of tab) {
-	a.addEventListener('click', scroll);
+function runScroll() {
+	scrollTo(document.body, 0, 600);
 }
 
-function scroll() {
-	let from = this;
-	let to = this.href;
+let scrollme;
+scrollme = document.querySelector("#scrollme");
+scrollme.addEventListener("click",runScroll,false);
+
+function scrollTo(element, to, duration) {
+	if (duration <= 0) return;
+	let difference = to - element.scrollTop;
+	let perTick = difference / duration * 10;
 	
-	console.log(from+" "+to);
+	setTimeout(function() {
+		element.scrollTop = element.scrollTop + perTick;
+		if (element.scrollTop == to) return;
+		scrollTo(element, to, duration - 10);
+	}, 10);
 }

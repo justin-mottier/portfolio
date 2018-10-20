@@ -32,3 +32,10 @@ margin: auto;
 .flaticon-cv-file-interface-symbol:before { content: "\f100"; }
 .flaticon-deviantart:before { content: "\f101"; }
 .flaticon-linkedin:before { content: "\f102"; }
+
+    @media screen and (max-width:639px) {
+        [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+        [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+            font-size: 80px;
+        }
+    }
