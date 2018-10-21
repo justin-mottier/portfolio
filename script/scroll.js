@@ -3,7 +3,7 @@ function runScroll() {
 }
 
 let scrollme;
-scrollme = document.querySelector("#scrollme");
+scrollme = document.getElementById("scroll");
 scrollme.addEventListener("click",runScroll,false);
 
 function scrollTo(element, to, duration) {
